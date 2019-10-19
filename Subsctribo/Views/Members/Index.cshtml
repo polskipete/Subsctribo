@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Subsctribo.Models.Members>
+@{
+    ViewBag.Title = "Members";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th><h3>Customer</h3></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var member in Model)
+            {
+                <tr>
+                    <td> <h4>@Html.ActionLink(member.Name, "MemberPage", "Members", new { id = member.Id }, null)</h4> </td>
+                </tr>
+
+            }
+        </tbody>
+
+    </table>
+</body>

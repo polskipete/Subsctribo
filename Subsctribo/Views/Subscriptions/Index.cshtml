@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Subsctribo.Models.Subscription>
+@{
+    ViewBag.Title = "Members";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th><h3>Subscriptions</h3></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var subscription in Model)
+            {
+                <tr>
+                    <td> <h4>@subscription.Name</h4> </td>
+                </tr>
+
+            }
+        </tbody>
+
+    </table>
+</body>

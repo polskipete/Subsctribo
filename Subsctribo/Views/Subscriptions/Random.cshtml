@@ -1,0 +1,31 @@
+﻿@model Subsctribo.ViewModels.RandomSubscriptionViewModel
+
+@*
+    Example
+*@
+
+@{
+    ViewBag.Title = "Random";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    var className = Model.Members.Count > 0 ? "subscriptionFound" : null;
+}
+
+<h2 class="@className">@Model.Subscription.Name</h2>
+
+@if (Model.Members.Count == 0)
+{
+    <text>No one in your family has the subscription</text>
+}
+else
+{
+<ul>
+    @foreach (var member in Model.Members)
+    {
+        <li>@member.Name</li>
+    }
+</ul>
+
+}
