@@ -170,9 +170,26 @@
     <Compile Include="Migrations\201910211558524_InitialModel.designer.cs">
       <DependentUpon>201910211558524_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201911050014135_AddIsPremiumToMember.cs" />
+    <Compile Include="Migrations\201911050014135_AddIsPremiumToMember.designer.cs">
+      <DependentUpon>201911050014135_AddIsPremiumToMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911050020574_AddMembershipType.cs" />
+    <Compile Include="Migrations\201911050020574_AddMembershipType.designer.cs">
+      <DependentUpon>201911050020574_AddMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911050029105_SeedMembershipTypes.cs" />
+    <Compile Include="Migrations\201911050029105_SeedMembershipTypes.designer.cs">
+      <DependentUpon>201911050029105_SeedMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911050038247_AddAnnotationsToMemberName.cs" />
+    <Compile Include="Migrations\201911050038247_AddAnnotationsToMemberName.designer.cs">
+      <DependentUpon>201911050038247_AddAnnotationsToMemberName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Members.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Subscription.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\MemberViewModel.cs" />
@@ -247,6 +264,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201910211558524_InitialModel.resx">
       <DependentUpon>201910211558524_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911050014135_AddIsPremiumToMember.resx">
+      <DependentUpon>201911050014135_AddIsPremiumToMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911050020574_AddMembershipType.resx">
+      <DependentUpon>201911050020574_AddMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911050029105_SeedMembershipTypes.resx">
+      <DependentUpon>201911050029105_SeedMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911050038247_AddAnnotationsToMemberName.resx">
+      <DependentUpon>201911050038247_AddAnnotationsToMemberName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

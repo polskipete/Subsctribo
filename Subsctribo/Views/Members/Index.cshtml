@@ -9,6 +9,7 @@
         <thead>
             <tr>
                 <th><h3>Customer</h3></th>
+                <th><h3>Subscription Plan</h3></th>
             </tr>
         </thead>
         <tbody>
@@ -16,6 +17,7 @@
             {
                 <tr>
                     <td> <h4>@Html.ActionLink(member.Name, "MemberPage", "Members", new { id = member.Id }, null)</h4> </td>
+                    <td> <h4>@member.MembershipType.DurationInMonths Month(s)</h4></td>
                 </tr>
 
             }

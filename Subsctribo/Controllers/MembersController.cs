@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.Entity;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,30 +10,32 @@ namespace Subsctribo.Controllers
 {
     public class MembersController : Controller
     {
+        private ApplicationDbContext _context;
+
+        public MembersController()
+        {
+            _context = new ApplicationDbContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
         // GET: Members
         [Route("members")]
         public ActionResult Index()
         {
-            var members=GetMembers();
+            var members = _context.Members.Include(m => m.MembershipType).ToList();
             return View(members);
         }
 
         public ActionResult MemberPage (int id)
         {
-            var members = GetMembers().SingleOrDefault(member => member.Id == id);
+            var members = _context.Members.SingleOrDefault(member => member.Id == id);
             if (members == null)
                 return HttpNotFound();
 
             return View(members);
-        }
-
-        private IEnumerable<Members> GetMembers()
-        {
-            return new List<Members>
-            {
-                new Members { Id = 1, Name = "Borat Sagdiyev" },
-                new Members { Id = 2, Name = "Jim Jones" }
-            };
         }
     }
 }
